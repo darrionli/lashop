@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\InvalidRequestException;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -9,6 +10,7 @@ class PagesController extends Controller
     // 首页
     public function root()
     {
+//        throw new InvalidRequestException('请先验证邮箱');
         return view('pages.root');
     }
 
