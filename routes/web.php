@@ -24,4 +24,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('address', 'UserAddressesController@index')->name('user_address_index');
     Route::get('address/create', 'UserAddressesController@create')->name('user_address_create');
     Route::post('address', 'UserAddressesController@store')->name('user_address_store');
+    Route::get('address/{userAddress}', 'UserAddressesController@edit')->name('user_address_edit');
+    Route::put('address/{userAddress}', 'UserAddressesController@update')->name('user_address_update');
+    Route::delete('address/{userAddress}', 'UserAddressesController@destroy')->name('user_address_destroy');
 });
